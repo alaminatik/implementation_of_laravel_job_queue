@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>How To Send Mail Using Queue In Laravel 10 - Techsolutionstuff</title>
+	<title>How To Send Mail Using Queue In Laravel 10 </title>
 </head>
 <body>
    
 <center>
 <h2>
-	<a href="https://techsolutionstuff.com">Visit Our Website : Techsolutionstuff</a>
+	<a href="https://alaminmia.com">Visit My Website : Alamin Mia</a>
 </h2>
 </center>
   
