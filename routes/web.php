@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SendMailController;
 use App\Mail\SendEmailQueue;
 use Illuminate\Support\Facades\Route;
 
