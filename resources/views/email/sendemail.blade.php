@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>How To Send Mail Using Queue In Laravel 10 </title>
+	<title>@isset($title) {{ $title }} @else '' @endisset</title>
 </head>
 <body>
    
@@ -13,7 +13,7 @@
   
 <p>Hello,</p>
 
-<p>This is a test mail. This mail send using queue listen in laravel 10.</p>  
+<p>@isset($description) {{ $description }} @else '' @endisset</p>  
 
 <strong>Thanks & Regards.</strong>
 

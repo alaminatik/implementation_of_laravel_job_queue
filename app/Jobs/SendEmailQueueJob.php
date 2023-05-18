@@ -29,15 +29,17 @@ class SendEmailQueueJob implements ShouldQueue
      */
     public function handle(): void
     {
-        $data = User::all();
+        $users = $this->details['users'];
         $input['subject'] = $this->details['subject'];
+        $input['title'] = $this->details['title'];
+        $input['description'] = $this->details['description'];
 
-        foreach ($data as $key => $value) {
+        foreach ($users as $key => $value) {
 
             $input['name'] = $value->name;
             $input['email'] = $value->email;
 
-            \Mail::send('mail.sendemail', [], function($message) use($input){
+            Mail::send('mail.sendemail', $input, function($message) use($input){
                 $message->to($input['email'], $input['name'])
                     ->subject($input['subject']);
             });
