@@ -36,7 +36,7 @@ php artisan db:seed
 
 ```
 
-##  Run Artisan command 
+##  Run Final Artisan command 
 ```
 Laravel includes an Artisan command that will start a queue worker and process new jobs as they are pushed onto the queue. You may run the worker using the below Artisan command.
 
@@ -45,6 +45,11 @@ $php artisan queue:work
 Alternatively, you may run the queue:listen command. When using the queue:listen command, you don’t have to manually restart the worker when you want to reload your updated code or reset the application state. 
 
 $php artisan queue:listen
+
+
+Now you can run project using bellow command:
+
+php artisan serve
 
 
 Lets Test
