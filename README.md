@@ -29,7 +29,7 @@ QUEUE_CONNECTION=database
 ```
 $ php artisan migrate
 
-Next Update the run function of seeder file.
+Next Update the run function of seeder file to 10000.
 
 Then Run the command below to seed the data this will genarate 10000 users fake data in users table
 php artisan db:seed
