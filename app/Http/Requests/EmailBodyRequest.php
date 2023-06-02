@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Exceptions\HttpResponseException;
 
 class EmailBodyRequest extends FormRequest
 {
@@ -28,4 +30,23 @@ class EmailBodyRequest extends FormRequest
             'description' => 'required',
         ];
     }
+
+    /**
+
+     * Get the error fail Validation for the defined validation rules.
+
+     *
+
+     */
+
+     protected function failedValidation(Validator $validator)
+     {
+        throw new HttpResponseException(response()->json([
+            'code' => 422,
+            'messages' => $validator->errors()->all(),
+            'data'  => null,
+
+        ],200));
+ 
+     }
 }

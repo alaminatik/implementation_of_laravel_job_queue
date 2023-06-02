@@ -28,8 +28,6 @@ class SendMailController extends Controller
 
     public function sendMail(EmailBodyRequest $request)
     {
-        // return 'ok';
-
         try {
 
             $details = [
@@ -39,10 +37,7 @@ class SendMailController extends Controller
                 'users' => $this->userService->getAll(),
             ];
 
-            // $result['data'] = $this->userService->getAll();
-
-            $job = (new \App\Jobs\SendEmailQueueJob($details))
-            	->delay(now()->addSeconds(2)); 
+            $job = new \App\Jobs\SendEmailQueueJob($details);
 
             dispatch($job);
 

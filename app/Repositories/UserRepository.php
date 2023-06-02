@@ -22,7 +22,7 @@ class UserRepository
     public function getAll()
     {
         return $this->user
-            ->get();
+                ->cursor();
     }
 
 

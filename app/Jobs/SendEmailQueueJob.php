@@ -16,6 +16,8 @@ class SendEmailQueueJob implements ShouldQueue
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
     protected $details;
     public $timeout = 7200; // 2 hours
+    public int $tries = 3;
+    public int $maxExceptions = 3;
     /**
      * Create a new job instance.
      */
